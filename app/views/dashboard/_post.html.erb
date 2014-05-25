@@ -1,0 +1,66 @@
+
+
+<% if post.post_type == 'Video' %>
+  <div class='postHeader'>
+    <div class='postHeaderLeft'>
+      <a href='#'>
+        <span class='postTitle'>Video</span>
+      </a>
+    </div>
+
+    <div class='postHeaderRight'>
+
+    </div>
+
+    <div class='postInfo'>
+
+    </div>
+  </div>
+
+  <div class='postContent'>
+
+    <div class='mediaWrap'>
+    <iframe>
+      <%= post.url %>
+    </iframe>
+    </div>
+
+    <div class='contentWrap'>
+
+    </div>
+
+  </div>
+
+<% end %>
+
+<% if(post.post_type == 'Text') %>
+  
+  <div class='postHeader'>
+    <div class='postHeaderLeft'>
+      <a href=''>
+        <span class='postTitle'><%= post.title %></span>
+      </a>
+    </div>
+
+    <div class='postHeaderRight'>
+
+    </div>
+
+    <div class='postInfo'>
+
+    </div>
+  </div>
+
+  <div class='postContent'>
+
+    <div class='mediaWrap'>
+
+    </div>
+
+    <div class='contentWrap'>
+      <p><%= post.description %></p>
+    </div>
+
+  </div>
+
+<% end %>

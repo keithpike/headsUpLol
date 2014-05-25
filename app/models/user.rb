@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   before_validation :ensure_session_token
   validates :email, :password_digest, presence: true
   validates :username, presence: true
+  validates :username, uniqueness: true, on: [:create]
 
   validates :password, length: {minimum: 4, allow_blank: true}
 
@@ -14,8 +15,17 @@ class User < ActiveRecord::Base
     :posts,
     through: :blogs,
     source: :posts
-  ) 
+  )
+  
+  def primary_blog
+    self.blogs.each do |blog|
+      return blog if blog.primary
+    end
+  end
 
+  def selected_blog
+    @selected_blog ||= self.primary_blog
+  end
 
   def generate_token
     SecureRandom::urlsafe_base64(32)
@@ -46,10 +56,6 @@ class User < ActiveRecord::Base
 
   def ensure_session_token
     self.session_token ||= generate_token
-  end
-
-    def blog_default
-  	self.blogs.find_by_show_first(true)
   end
 
 end

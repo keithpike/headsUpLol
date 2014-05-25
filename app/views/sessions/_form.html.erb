@@ -1,0 +1,13 @@
+<div class='signInFormWrapper'>
+  <form action='<%= session_url %>' method='POST'>
+    <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+    <label for="user_username">Username</label>
+    <input type="text" class='usernameInput' name="user[username]" id="user_username" required>
+
+    <label for="user_password">Password</label>
+    <input type="password" class='passwordInput' name="user[password]" id="user_password" required>
+
+    <input type='submit' class='signInButton' value='Sign In'>
+  </form>
+  <a class='signupLink' href='<%= new_user_url %>'>Not a member?</a>
+</div>

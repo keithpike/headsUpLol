@@ -1,0 +1,12 @@
+<%= javascript_tag do %>
+	window.blogId = "<%=j @blogId.to_s %>";
+<% end %>
+
+<input type='hidden' name='post[blog_id]' value='<%= @blogId %>'>
+<input type='hidden' name='post[post_type]' value='Video'>
+
+<input type='text' name='post[title]' id='postTitleInput'placeholder='Title'>
+<textarea name='post[description]' id='postDescriptionInput'>
+</textarea>
+
+<link href='#' class='urlPopup'></label>

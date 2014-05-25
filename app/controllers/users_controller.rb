@@ -1,16 +1,16 @@
 class UsersController < ApplicationController
   def new
-
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
+      @blog = @user.blogs.create(title: "Change your blog title!", primary: true)
       login!(@user)
-
-      redirect_to root_url #render dashboard with first blog showing
+      redirect_to users_dashboard_url #render dashboard with first blog showing
     else
-      #render errors
+      flash.now[:errors] = @user.errors.full_messages
+      render :new
     end
   end
 

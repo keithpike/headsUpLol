@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require serializeJSON
+//= require underscore
+//= require backbone
+//= require backbone-support/support
+//= require backbone-support/observer
+//= require backbone-support/composite_view
+//= require backbone-support/swapping_router
+//= require bootstrap
+//= require dashboard_actions

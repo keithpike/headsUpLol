@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
+  
   def new
-    
+
   end
 
   def create
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
     )
     if @user
       login!(@user)
-      redirect_to root_url
+      redirect_to users_dashboard_url
     else
       render :new
       #render error

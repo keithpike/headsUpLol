@@ -1,0 +1,22 @@
+<div class='dashboardContent container'>
+  <div class='modalWrapper'>
+    <div class='dashboardPostsNavbar'>
+      <%= render partial: "dashboard/post_selector" %>
+    </div>
+    <%= render partial: 'dashboard/modal_post', layout: 'layouts/post_modal' %>
+  </div>
+
+  <div class='postsWrapper'>
+    <% unless current_user.selected_blog.nil? %>
+      <% current_user.selected_blog.posts.sort_by{|post| post[:created_at]}.reverse.each do |post| %>
+
+        <%= render partial: 'dashboard/post', layout: 'layouts/post', locals: { post: post } %>
+
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class='dashboardRightNavbar'>
+    <%= render partial: 'dashboard/right_navbar' %>
+  </div>
+</div>
