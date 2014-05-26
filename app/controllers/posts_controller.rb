@@ -22,10 +22,11 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		@post.media_url = get_embed_link(@post.media_url)['html']
+    if @post.media_url
+  		@post.media_url = get_embed_link(@post.media_url)['html']
+    end
 		if @post.save
-			head :ok
-			#render 'users/dashboard'
+      render :show, layout: 'layouts/blank'
 		else
 			flash.now[:error] = @post.errors.full_messages
 			render 'users/dashboard'
@@ -41,7 +42,7 @@ class PostsController < ApplicationController
 			flash[:error] = 'Only the owner may delete this blog'
 			redirect_to posts_url
 		end
-		
+
 	end
 
 	def edit

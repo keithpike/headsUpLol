@@ -28,10 +28,10 @@ module ApplicationHelper
   def get_embed_link(passed_url)
     begin
       o = OhEmbedr::OhEmbedr.new(:url => passed_url, :maxwidth => 400)
-      debugger
       embed_data = o.gets
     rescue OhEmbedr::UnsupportedError => error
-      # URL not supported
+      o = OhEmbedr::OhEmbedr.new(:url => 'http://www.youtube.com/watch?v=nu8-7huFyvo', :maxwidth => 400)
+      embed_data = o.gets
     end
   end
 

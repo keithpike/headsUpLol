@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+
   def new
 
   end
@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
+    debugger
     if @user
       login!(@user)
       redirect_to users_dashboard_url

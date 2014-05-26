@@ -1,0 +1,2 @@
+class LinkPostsController < ApplicationController
+end

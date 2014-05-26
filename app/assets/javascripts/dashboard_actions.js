@@ -12,13 +12,14 @@ $(function(){
 	function handlePostSubmit(event){
       event.preventDefault();
       var formData = $('#newPostForm').serialize();
-     	
+
       $.ajax({
       	url: '/blogs/' + window.blogId + '/posts',
       	type: 'POST',
       	data: formData,
-      	success: function(){
+      	success: function(response){
       		$('#newPostModal').modal('hide');
+          addPostToPage(response);
       	}
 			});
 	};
@@ -39,5 +40,11 @@ $(function(){
       	}
 			});
   };
+
+  function addPostToPage(serverResponse){
+    $('.postsWrapper').prepend(serverResponse)
+  };
+
+
 
 });
