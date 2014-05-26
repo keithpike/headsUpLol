@@ -1,1 +1,0 @@
-Rails.application.config.assets.precompile += %w( text_delimiter.png button.psd markdown-toolbar.png text_blockquote.png text_bold.png text_code.png text_delimiter.png text_empty.png text_heading_1.png text_heading_2.png text_heading_3.png text_image.png text_italic.png text_link.png text_list_bullets.png text_list_numbers.png text_strike.png text_underline.png )

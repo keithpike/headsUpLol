@@ -25,5 +25,15 @@ module ApplicationHelper
     redirect_to splash_url unless logged_in?
   end
 
+  def get_embed_link(passed_url)
+    begin
+      o = OhEmbedr::OhEmbedr.new(:url => passed_url, :maxwidth => 400)
+      debugger
+      embed_data = o.gets
+    rescue OhEmbedr::UnsupportedError => error
+      # URL not supported
+    end
+  end
+
 
 end

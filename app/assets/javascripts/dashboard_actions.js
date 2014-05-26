@@ -3,7 +3,6 @@ $(function(){
 	$('#newPostModal').on('click','#postInputButton', handlePostSubmit);
 
 	function handleNewPost(event){
-		debugger
 		event.preventDefault();
 		var formFields = makeFormRequest('../' +
 			$(event.target).text().toLowerCase() + '_post/new');
@@ -31,14 +30,12 @@ $(function(){
 	};
 
 	function makeFormRequest(passedUrl){
-			debugger
 			 $.ajax({
       	url: passedUrl,
       	type: 'GET',
       	success: function(response){
 	  			$('#newPostForm').html(response);
-					var toolbar = new MarkdownToolbar($("#postDescriptionInput"));
-					toolbar.resize_textarea();
+	  			$("textarea").markItUp(mySettings);
       	}
 			});
   };

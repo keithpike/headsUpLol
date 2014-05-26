@@ -20,12 +20,9 @@
   <div class='postContent'>
 
     <div class='mediaWrap'>
-
-    
-    <% debugger %>
-    <iframe width="420" height="345"
-        src=<%= post.media_url %>>
-    </iframe>
+      <% if post.media_url %>
+        <%= post.media_url.html_safe %>
+      <% end %>
     </div>
 
     <div class='contentWrap'>

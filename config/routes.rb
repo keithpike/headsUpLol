@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # get 'splash', to: 'static#frontpage'
   root to: 'sessions#new'
   get 'users/dashboard'
+  mount Markitup::Rails::Engine, at: "markitup", as: "markitup"
   resources :blogs do
     resources :posts, except: [:index] do
     end

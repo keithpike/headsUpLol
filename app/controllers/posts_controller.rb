@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		# @post.media_url = media_parse(params[:media_url]) 
+		@post.media_url = get_embed_link(@post.media_url)['html']
 		if @post.save
 			head :ok
 			#render 'users/dashboard'

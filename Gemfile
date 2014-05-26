@@ -15,8 +15,11 @@ gem 'tzinfo'
 gem 'jquery-rails'
 
 gem 'jbuilder', '~> 2.0'
-gem 'markdown-toolbar'
+gem 'markitup-rails'
 gem 'redcarpet'
+gem 'filepicker-rails'
+gem 'figaro'
+gem 'ohembedr'
 
 group :production do
   gem 'rails_12factor'

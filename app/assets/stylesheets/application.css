@@ -12,5 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require markdown-toolbar
+ *= require markitup/skins/simple/style
+ *= require markitup/sets/markdown/style
  */

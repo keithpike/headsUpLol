@@ -21,4 +21,5 @@
 //= require backbone-support/swapping_router
 //= require bootstrap
 //= require dashboard_actions
-//= require markdown-toolbar
+//= require markitup
+//= require markitup/sets/markdown/set
