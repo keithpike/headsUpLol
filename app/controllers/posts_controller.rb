@@ -10,7 +10,8 @@ class PostsController < ApplicationController
 		if @post
 			render :show
 		else
-			redirect_to blogs_url
+			flash[:error] = 'Post could not be found'
+			redirect_to 'users/dashboard'
 		end
 	end
 
@@ -21,11 +22,11 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
+		# @post.media_url = media_parse(params[:media_url]) 
 		if @post.save
 			head :ok
 			#render 'users/dashboard'
 		else
-			debugger
 			flash.now[:error] = @post.errors.full_messages
 			render 'users/dashboard'
 		end

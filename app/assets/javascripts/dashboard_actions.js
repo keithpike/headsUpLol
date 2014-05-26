@@ -1,52 +1,12 @@
 $(function(){
-	$('.dashboardNavbarButtons #newPostText').on('click', handleNewTextPost);
-	$('.dashboardNavbarButtons #newPostPhoto').on('click', handleNewPhotoPost);
-	$('.dashboardNavbarButtons #newPostQuote').on('click', handleNewQuotePost);
-	$('.dashboardNavbarButtons #newPostLink').on('click', handleNewLinkPost);
-	$('.dashboardNavbarButtons #newPostChat').on('click', handleNewChatPost);
-	$('.dashboardNavbarButtons #newPostAudio').on('click', handleNewAudioPost);
-	$('.dashboardNavbarButtons #newPostVideo').on('click', handleNewVideoPost);
-	$('#postInputButton').on('click', handlePostSubmit);
+	$('.dashboardNavbarButtons').on('click', '.newPostButton', handleNewPost);
+	$('#newPostModal').on('click','#postInputButton', handlePostSubmit);
 
-	function handleNewTextPost(event){
+	function handleNewPost(event){
+		debugger
 		event.preventDefault();
-		var formFields = makeFormRequest('../text_post/new');
-		handleModalOpen('#newPostModal');
-	};
-
-	function handleNewPhotoPost(event){
-		event.preventDefault();
-		var formFields = makeFormRequest('../photo_post/new');
-		handleModalOpen('#newPostModal');
-	};
-
-	function handleNewQuotePost(event){
-		event.preventDefault();
-		var formFields = makeFormRequest('../quote_post/new');
-		handleModalOpen('#newPostModal');
-	};
-
-	function handleNewLinkPost(event){
-		event.preventDefault();
-		var formFields = makeFormRequest('../link_post/new');
-		handleModalOpen('#newPostModal');
-	};
-
-	function handleNewChatPost(event){
-		event.preventDefault();
-		var formFields = makeFormRequest('../chat_post/new');
-		handleModalOpen('#newPostModal');
-	};
-
-	function handleNewAudioPost(event){
-		event.preventDefault();
-		var formFields = makeFormRequest('../audio_post/new');
-		handleModalOpen('#newPostModal');
-	};
-
-	function handleNewVideoPost(event){
-		event.preventDefault();
-		var formFields = makeFormRequest('../video_post/new');
+		var formFields = makeFormRequest('../' +
+			$(event.target).text().toLowerCase() + '_post/new');
 		handleModalOpen('#newPostModal');
 	};
 
@@ -60,7 +20,6 @@ $(function(){
       	data: formData,
       	success: function(){
       		$('#newPostModal').modal('hide');
-
       	}
 			});
 	};
@@ -71,12 +30,15 @@ $(function(){
 		$(selector).modal('show');
 	};
 
-	function makeFormRequest(url){
+	function makeFormRequest(passedUrl){
+			debugger
 			 $.ajax({
-      	url: '../text_post/new',
+      	url: passedUrl,
       	type: 'GET',
       	success: function(response){
 	  			$('#newPostForm').html(response);
+					var toolbar = new MarkdownToolbar($("#postDescriptionInput"));
+					toolbar.resize_textarea();
       	}
 			});
   };

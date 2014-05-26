@@ -1,6 +1,7 @@
 class VideoPostsController < ApplicationController
+	layout 'blank'
 	def new
-		@post = Post.new
-		render: new
+		@blogId = current_user.selected_blog.id
+		render :new
 	end
 end
