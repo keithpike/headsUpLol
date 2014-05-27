@@ -1,0 +1,18 @@
+<ul class='blogControls'>
+  <ul class='blogDropDownSelector'>
+    <% blogs.each do |blog| %>
+      <li class='blogSelectionListItem'>
+        <span class='blogSelectionText'><%= blog.title %></span>
+      </li>
+    <% end %>
+  </ul>
+  <li class='blogPostsControl'>
+    <a href='#' class='blogPostsLink'>Posts</a>
+  </li>
+  <li class='followersListItem'>
+    <a href='#' class='followersLink'>Followers</a>
+  </li>
+  <li class='activityListItem'>
+    <a href='#' class='activityLink'>Activity</a>
+  </li>
+</ul>

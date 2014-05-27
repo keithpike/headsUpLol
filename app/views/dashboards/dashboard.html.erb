@@ -1,29 +1,28 @@
 
-<div class='dashboardContent container'>
+<div class='dashboardContent jumbotron container'>
   <div class='modalWrapper'>
 
     <div class='dashboardPostsNavbar'>
-      <%= render partial: "dashboard/post_selector" %>
+      <%= render partial: "dashboards/post_selector" %>
     </div>
 
-    <%= render partial: 'dashboard/modal_post', layout: 'layouts/post_modal' %>
+    <%= render partial: 'dashboards/modal_post', layout: 'layouts/post_modal' %>
   </div>
 
   <div class='postsWrapper'>
     <% unless current_user.selected_blog.nil? %>
       <% current_user.selected_blog.posts.sort_by{|post| post[:created_at]}.reverse.each do |post| %>
 
-        <%= render partial: 'dashboard/post', layout: 'layouts/post', locals: { post: post, markdown: @markdown } %>
+        <%= render partial: 'dashboards/post', layout: 'layouts/post', locals: { post: post, markdown: @markdown } %>
 
       <% end %>
     <% end %>
   </div>
 
   <div class='dashboardRightNavbar'>
-    <%= render partial: 'dashboard/right_navbar' %>
+    <%= render partial: 'dashboards/right_navbar', layout: 'layouts/blank', locals: { blogs: current_user.blogs} %>
   </div>
 </div>
-
 <%= javascript_tag do %>
 	window.selectedBlogId = '<%=j current_user.selected_blog.id.to_s %>';
 <% end %>

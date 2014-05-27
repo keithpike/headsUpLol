@@ -37,8 +37,12 @@ $(function(){
       	success: function(response){
 	  			$('#newPostForm').html(response);
 	  			$('textarea#postDescriptionInput, textarea#postCaptionInput').markItUp(mySettings);
-          $('#blogIdInputField').attr('value', window.selectedBlogId)  
-          filepicker.constructWidget($("input[type=filepicker]")[0]);
+          $('#blogIdInputField').attr('value', window.selectedBlogId);
+          $filepicker = $("input[type=filepicker]");
+          if($filepicker.length){
+            filepicker.constructWidget($filepicker[0]);
+          }
+
       	}
 			});
   };
@@ -47,5 +51,5 @@ $(function(){
     $('.postsWrapper').prepend(serverResponse)
   };
 
-
+  filepicker.setKey('AMj6SNanpS6SdkFqLxSLJz');
 });

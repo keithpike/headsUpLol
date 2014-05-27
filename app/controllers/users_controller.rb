@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     if @user.save
       @blog = @user.blogs.create(title: "Change your blog title!", primary: true)
       login!(@user)
-      redirect_to users_dashboard_url #render dashboard with first blog showing
+      redirect_to dashboard_url #render dashboard with first blog showing
     else
       flash.now[:errors] = @user.errors.full_messages
       render :new

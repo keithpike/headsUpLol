@@ -45,17 +45,26 @@ a.disabled {
 
 //                                         Posts                                           //
 
+div{
+  font:14px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
+}
+
+iframe.markItUpPreviewFrame{
+  width: 452px;
+  height: 112px;
+}
+
 .postInfo > p{
   color: gainsboro;
   font:13px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
 }
 
-div{
-  font:14px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
-}
+
+
+
 
 span.postTitle{
- font-size: 200%;
+ font:22px/30px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
 }
 
 
@@ -66,11 +75,11 @@ span.postTitle{
 //                                        QuotePost                                        //
 
 span.quote{
-  font-size: 36px/42px georgia, serif;
+  font:36px/42px georgia, serif;
 }
 span.attribution.capitalize{
   text-transform: capitalize;
-  font-size: 150%;
+  font:16px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
 }
 
 span.attribution:before{
@@ -79,5 +88,6 @@ span.attribution:before{
 
 
 //                                       TextPost                                          //
+
 
 

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  # get 'splash', to: 'static#frontpage'
+  # Correct this. Make things actually use controllers
   root to: 'sessions#new'
-  get 'users/dashboard'
   mount Markitup::Rails::Engine, at: "markitup", as: "markitup"
   resources :blogs do
     resources :posts, except: [:index] do
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index]
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
+  resource :dashboard, only: [:show]
   resource :text_post, only: [:new]
   resource :photo_post, only: [:new]
   resource :quote_post, only: [:new]

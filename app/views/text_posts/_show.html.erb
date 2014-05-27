@@ -22,7 +22,7 @@
     </div>
 
     <div class='contentWrap'>
-      <p class='postDescription'><%= markdown.render(post.description) %></p>
+      <p class='postDescription'><%= @markdown.render(post.description).html_safe %></p>
     </div>
 
   </div>

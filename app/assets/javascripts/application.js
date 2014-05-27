@@ -19,7 +19,6 @@
 //= require backbone-support/observer
 //= require backbone-support/composite_view
 //= require backbone-support/swapping_router
-//= require bootstrap
 //= require dashboard_actions
 //= require markitup
 //= require markitup/sets/markdown/set

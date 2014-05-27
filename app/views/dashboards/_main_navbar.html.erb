@@ -4,7 +4,7 @@
     <div class='headerNavigationWrapper'>
       <div class='headerMainNavbar'>
         <% if current_user %>
-          <a href='#'>Home</a>
+          <a href='/dashboard'>Home</a>
           <a href='#'>Settings</a>
           <%= button_to "Log Out", session_url, {method: :delete} %>
         <% else %>

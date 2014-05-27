@@ -26,8 +26,29 @@ module ApplicationHelper
   end
 
   def get_embed_link(passed_url)
-    
+    embedly_api = Embedly::API.new({:key => "b34a3afa6a914655a08863974ee790a8"})
     obj = embedly_api.oembed(url: passed_url, maxwidth: 500)
+  end
+
+  def get_markdown_renderer
+    $markdown
+  end
+
+  def parse_chat(text)
+    parsed_chat = []
+    lines = text.split("\r\n")
+    lines.each do |line|
+      lineFragments = line.split(':')
+      lineFragments[0] = "**" + lineFragments.first + "**" unless lineFragments[1].nil?
+
+      if lineFragments[0].nil?
+        parsed_chat << "\r\n"
+      else
+        parsed_chat << lineFragments.join(":")
+      end
+    end
+    parsed_chat.join("\r\n")
+
   end
 
 

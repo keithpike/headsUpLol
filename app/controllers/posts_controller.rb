@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
-	@markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-	
+
 	def index
 		@posts = current_user.posts
 		render :index
@@ -13,7 +12,7 @@ class PostsController < ApplicationController
 			render :show
 		else
 			flash[:error] = 'Post could not be found'
-			redirect_to 'users/dashboard'
+			redirect_to dashboard_url
 		end
 	end
 
@@ -23,12 +22,14 @@ class PostsController < ApplicationController
 	end
 
 	def create
+    @markdown = get_markdown_renderer
 		@post = Post.new(post_params)
+    @post.caption = parse_chat(post_params[:caption]) unless post_params[:caption].nil?
 		if @post.save
       render :show, layout: 'layouts/blank'
 		else
 			flash.now[:error] = @post.errors.full_messages
-			render 'users/dashboard'
+			render 'dashboards/dashboard'
 		end
 	end
 
