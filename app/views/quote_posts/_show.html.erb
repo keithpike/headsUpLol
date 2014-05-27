@@ -1,0 +1,27 @@
+<div class='postHeader'>
+  <div class='postHeaderLeft'>
+    <a href='#'>
+      <span class='postTitle'>Quote</span>
+    </a>
+  </div>
+
+  <div class='postHeaderRight'>
+  </div>
+
+  <div class='postInfo'>
+    <p><%= current_user.username %></p>
+    <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+  </div>
+</div>
+
+<div class='postContent'>
+
+  <div class='mediaWrap'>
+  </div>
+
+  <div class='contentWrap'>
+    <span class='quote'>&#8220;<%= post.caption %>&#8221;</span>
+    <span class='attribution capitalize'><%= post.description %></span>
+  </div>
+
+</div>

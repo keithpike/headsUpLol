@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resource :text_post, only: [:new]
   resource :photo_post, only: [:new]
-  resource :qyote_post, only: [:new]
+  resource :quote_post, only: [:new]
   resource :link_post, only: [:new]
   resource :chat_post, only: [:new]
   resource :audio_post, only: [:new]

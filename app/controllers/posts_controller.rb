@@ -22,9 +22,6 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-    if @post.media_url
-  		@post.media_url = get_embed_link(@post.media_url)['html']
-    end
 		if @post.save
       render :show, layout: 'layouts/blank'
 		else
@@ -66,7 +63,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :media_url, :description, :post_type, :blog_id)
+		params.require(:post).permit(:title, :media_url, :description, :post_type, :blog_id, :url, :caption)
 	end
 
 end

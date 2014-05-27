@@ -1,3 +1,4 @@
+
 <div class='dashboardContent container'>
   <div class='modalWrapper'>
     <div class='dashboardPostsNavbar'>
@@ -20,3 +21,6 @@
     <%= render partial: 'dashboard/right_navbar' %>
   </div>
 </div>
+<%= javascript_tag do %>
+	window.selectedBlogId = '<%=j current_user.selected_blog.id.to_s %>';
+<% end %>

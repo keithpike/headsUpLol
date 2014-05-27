@@ -3,9 +3,81 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+//----------------------------------Input form Styling-------------------------------//
+
+#postCaptionInput{
+  width: 440px;
+  height: 100px;
+}
+
+#postDescriptionInput{
+  width: 440px;
+  height: 100px;
+}
+
+#postQuoteInput{
+  width: 440px;
+  height: 100px;
+}
+
+//----------------------------------Output Display Styling-------------------------------//
+
+
+
+//                                       PostBar                                          //
+
+a.disabled {
+  text-decoration: none;
+}
+
 .formLoading{
 	background-image: 'assets/ajax-loader.gif';
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 100px;
 }
+
+.newPostButton.disabled > span{
+  pointer-events: none;
+  color: gray;
+}
+
+
+//                                         Posts                                           //
+
+.postInfo > p{
+  color: gainsboro;
+  font:13px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
+}
+
+div{
+  font:14px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
+}
+
+span.postTitle{
+ font-size: 200%;
+}
+
+
+
+
+
+
+//                                        QuotePost                                        //
+
+span.quote{
+  font-size: 36px/42px georgia, serif;
+}
+span.attribution.capitalize{
+  text-transform: capitalize;
+  font-size: 150%;
+}
+
+span.attribution:before{
+  content: "- ";
+}
+
+
+//                                       TextPost                                          //
+
+

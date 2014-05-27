@@ -1,0 +1,16 @@
+  <div class='mainHeader'>
+    <div class='headerIcon'>
+    </div>
+    <div class='headerNavigationWrapper'>
+      <div class='headerMainNavbar'>
+        <% if current_user %>
+          <a href='#'>Home</a>
+          <a href='#'>Settings</a>
+          <%= button_to "Log Out", session_url, {method: :delete} %>
+        <% else %>
+        <% end %>
+      </div>
+    </div>
+
+
+  </div>

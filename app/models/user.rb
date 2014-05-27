@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     through: :blogs,
     source: :posts
   )
-  
+
   def primary_blog
     self.blogs.each do |blog|
       return blog if blog.primary
@@ -25,6 +25,10 @@ class User < ActiveRecord::Base
 
   def selected_blog
     @selected_blog ||= self.primary_blog
+  end
+
+  def selected_blog=(blog)
+    @selected_blog = blog
   end
 
   def generate_token

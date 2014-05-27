@@ -1,10 +1,6 @@
-<%= javascript_tag do %>
-	window.blogId = "<%=j @blogId.to_s %>";
-<% end %>
+<input type='hidden' id='blogIdInputField' name='post[blog_id]' value='<%= @blogId %>'>
+<input type='hidden' name='post[post_type]' value='Chat'>
 
-<input type='hidden' name='post[blog_id]' value='<%= @blogId %>'>
-<input type='hidden' name='post[post_type]' value='Video'>
-
-<input type='text' name='post[title]' id='postTitleInput'placeholder='Title'>
-<textarea name='post[description]' id='postDescriptionInput' placeholder="Steven Wright: I think it's wrong that only one company makes the game Monopoly.">
+<input type='text' name='post[title]' id='postTitleInput' placeholder='Title'>
+<textarea name='post[caption]' id='postCaptionInput' placeholder="Steven Wright: I think it's wrong that only one company makes the game Monopoly.">
 </textarea>

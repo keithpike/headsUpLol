@@ -14,7 +14,7 @@ $(function(){
       var formData = $('#newPostForm').serialize();
 
       $.ajax({
-      	url: '/blogs/' + window.blogId + '/posts',
+      	url: '/blogs/' + window.selectedBlogId + '/posts',
       	type: 'POST',
       	data: formData,
       	success: function(response){
@@ -36,7 +36,8 @@ $(function(){
       	type: 'GET',
       	success: function(response){
 	  			$('#newPostForm').html(response);
-	  			$("textarea").markItUp(mySettings);
+	  			$('textarea#postDescriptionInput, textarea#postCaptionInput').markItUp(mySettings);
+          $('#blogIdInputField').attr('value', window.selectedBlogId)
       	}
 			});
   };
