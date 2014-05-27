@@ -37,7 +37,8 @@ $(function(){
       	success: function(response){
 	  			$('#newPostForm').html(response);
 	  			$('textarea#postDescriptionInput, textarea#postCaptionInput').markItUp(mySettings);
-          $('#blogIdInputField').attr('value', window.selectedBlogId)
+          $('#blogIdInputField').attr('value', window.selectedBlogId)  
+          filepicker.constructWidget($("input[type=filepicker]")[0]);
       	}
 			});
   };
@@ -45,7 +46,6 @@ $(function(){
   function addPostToPage(serverResponse){
     $('.postsWrapper').prepend(serverResponse)
   };
-
 
 
 });

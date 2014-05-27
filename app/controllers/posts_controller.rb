@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+	@markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+	
 	def index
 		@posts = current_user.posts
 		render :index

@@ -10,8 +10,8 @@ gem 'backbone-on-rails'
 gem 'backbone-support'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
-# gem 'tzinfo-data'
-# gem 'tzinfo'
+gem 'tzinfo-data'
+gem 'tzinfo'
 gem 'jquery-rails'
 
 gem 'jbuilder', '~> 2.0'
@@ -19,8 +19,8 @@ gem 'markitup-rails'
 gem 'redcarpet'
 gem 'filepicker-rails'
 gem 'figaro'
-gem 'ohembedr'
-
+#gem 'ohembedr'
+gem 'embedly'
 group :production do
   gem 'rails_12factor'
 end

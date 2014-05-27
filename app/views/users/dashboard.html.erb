@@ -13,7 +13,7 @@
     <% unless current_user.selected_blog.nil? %>
       <% current_user.selected_blog.posts.sort_by{|post| post[:created_at]}.reverse.each do |post| %>
 
-        <%= render partial: 'dashboard/post', layout: 'layouts/post', locals: { post: post } %>
+        <%= render partial: 'dashboard/post', layout: 'layouts/post', locals: { post: post, markdown: @markdown } %>
 
       <% end %>
     <% end %>

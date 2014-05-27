@@ -18,8 +18,12 @@
   <div class='postContent'>
 
     <div class='mediaWrap'>
-      <% if post.media_url %>
-        <%= get_embed_link(post.media_url)['html'].html_safe %>
+      <% embeddable = get_embed_link(post.media_url).first.html %>
+      <% if embeddable %>
+       <%= embeddable.html_safe %>
+      <% else %>
+        <img src= 'https://s3-us-west-1.amazonaws.com/headsuplolimages/404error.bmp' alt='404 error try another URL'></img>
+        <p>Try a different URL this one is BUSTED!</p>
       <% end %>
     </div>
 
