@@ -54,7 +54,7 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 		@post.update_attributes(post_params)
 
-		if @blog.save
+		if @post.save
 			redirect_to post_url(@post)
 		else
 			flash.now[:error] = @post.errors.full_messages

@@ -26,8 +26,9 @@ module ApplicationHelper
   end
 
   def get_embed_link(passed_url)
-    embedly_api = Embedly::API.new({:key => "b34a3afa6a914655a08863974ee790a8"})
     obj = embedly_api.oembed(url: passed_url, maxwidth: 500)
+    debugger
+    sleep 5
   end
 
   def get_markdown_renderer

@@ -51,5 +51,4 @@ $(function(){
     $('.postsWrapper').prepend(serverResponse)
   };
 
-  filepicker.setKey('AMj6SNanpS6SdkFqLxSLJz');
 });

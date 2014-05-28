@@ -6,21 +6,40 @@
 //----------------------------------Input form Styling-------------------------------//
 
 #postCaptionInput{
-  width: 440px;
   height: 100px;
+  width: 440px;
 }
 
 #postDescriptionInput{
-  width: 440px;
   height: 100px;
+  width: 440px;
 }
 
 #postQuoteInput{
-  width: 440px;
   height: 100px;
+  width: 440px;
 }
 
 //----------------------------------Output Display Styling-------------------------------//
+
+
+//                                    Modal Post Input                                    //
+
+div.modal-footer{
+  background-color: #222222;
+}
+
+div.modal-header{
+  background-color: #222222;
+}
+
+div.markItUpContainer{
+  background-color: #F7F7F7;
+}
+
+//                                       Page                                             //
+
+
 
 
 
@@ -32,38 +51,78 @@ a.disabled {
 
 .formLoading{
 	background-image: 'assets/ajax-loader.gif';
-	background-repeat: no-repeat;
 	background-position: center;
+	background-repeat: no-repeat;
 	height: 100px;
 }
 
 .newPostButton.disabled > span{
-  pointer-events: none;
   color: gray;
+  pointer-events: none;
 }
 
 
 //                                         Posts                                           //
 
+.container.dashboardContent{
+  background-color: #222222;
+}
+
 div{
+  color: #FFFFFF;
   font:14px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
 }
 
-iframe.markItUpPreviewFrame{
-  width: 452px;
-  height: 112px;
+div.mainContentWrapper{
+  background-color: #222222;
 }
 
-.postInfo > p{
+div.headerNavigationWrapper{
+  background-color: #222222;
+}
+
+div.modal-body{
+  background-color: #323232;
+}
+
+html{
+  background-color: #222222;
+  foreground-color: #222222;
+}
+
+iframe.markItUpPreviewFrame{
+  height: 112px;
+  width: 452px;
+}
+
+.markItUpContainer{
+  width: 454px;
+}
+
+#newPostForm{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel.col-xs-9{
+  background-color: #222222;
+  border: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+.postContainer{
+  background-color: #333333;
+}
+
+.postInfo p{
   color: gainsboro;
   font:13px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
 }
 
-
-
-
-
 span.postTitle{
+ color: #FFDB4C;
  font:22px/30px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
 }
 
@@ -74,12 +133,29 @@ span.postTitle{
 
 //                                        QuotePost                                        //
 
+
+#markItUpPostDescriptionInput{
+  margin: 0 auto;
+
+}
+
+#postDescriptionInput.markItUp{
+  margin: 7px auto;
+  resize: vertical;
+  width: 450px;
+}
+
+#postQuoteInput{
+  margin: 0 auto;
+  resize: vertical;
+}
+
 span.quote{
   font:36px/42px georgia, serif;
 }
 span.attribution.capitalize{
-  text-transform: capitalize;
   font:16px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
+  text-transform: capitalize;
 }
 
 span.attribution:before{
@@ -87,7 +163,12 @@ span.attribution:before{
 }
 
 
+
+
 //                                       TextPost                                          //
 
+.markItUpEditor{
+  max-width: 100%;
+}
 
 
