@@ -1,14 +1,18 @@
-  <form action='<%= users_url %>' method='POST'>
     
+<div class='signInFormWrapper absoluteCenter'>
+  <h1 class='splashLogoHeader'> 
+    <a class='splashLogo'>HeadsUpLol</a>
+  </h1>
+
+  <form id='signInForm' action='<%= users_url %>' method='POST'>
     <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
-    <label for="user_username">Username</label>
-    <input type="text" class='username-input' name="user[username]" value="" id="user_username" required>
 
-    <label for="user_email">Email</label>
-    <input type="email" class ='email-input' name="user[email]" value="" id="user_email" required>
+    <input type="text" class='username-input' name="user[username]" value="" id="user_username" placeholder='Username' required>
 
-    <label for="user_password">Password</label>
-    <input type="password" class='password-input' name="user[password]" value="" id="user_password" required>
+    <input type="email" class ='email-input' name="user[email]" value="" id="user_email" placeholder='Email' required>
+
+    <input type="password" class='password-input' name="user[password]" value="" id="user_password" placeholder='Password' required>
 
     <input type='submit' value='Sign Up'>
   </form>
+</div>

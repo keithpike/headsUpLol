@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-
+  layout 'splash', only: [:new, :create]
+  before_action :ensure_logged_out, only: [:new, :create]
   def new
 
   end

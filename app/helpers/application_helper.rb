@@ -26,9 +26,7 @@ module ApplicationHelper
   end
 
   def get_embed_link(passed_url)
-    obj = embedly_api.oembed(url: passed_url, maxwidth: 500)
-    debugger
-    sleep 5
+    obj = $embedly_api.oembed(url: passed_url, maxwidth: 500)
   end
 
   def get_markdown_renderer
@@ -50,6 +48,14 @@ module ApplicationHelper
     end
     parsed_chat.join("\r\n")
 
+  end
+
+  def ensure_logged_out
+    redirect_to dashboard_url if logged_in?
+  end
+
+  def get_splash_image
+    "https://s3-us-west-1.amazonaws.com/headsuplolimages/splash#{("1".."10").to_a.sample}.jpg"
   end
 
 

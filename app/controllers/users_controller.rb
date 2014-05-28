@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
+  before_action :ensure_logged_out, only: [:new, :create]
+  layout 'splash', only: [:new, :create]
   def new
+
   end
 
   def create
+    layout 'splash'
     @user = User.new(user_params)
     if @user.save
       @blog = @user.blogs.create(title: "Change your blog title!", primary: true)

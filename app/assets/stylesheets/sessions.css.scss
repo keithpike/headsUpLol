@@ -1,3 +1,101 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//                         splash page                       //
+
+a.splashLogo{
+	font:35px/24px "make_juice";
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+	width: 100%;
+}
+
+a.splashLogo:hover{
+	text-decoration: none;
+}
+
+.autoSignInButton{
+	background-color: #084F9E;
+	border: 1px;
+	margin-top: 12px;
+	width: 100%;
+}
+
+div.openingBackground{
+	z-index: 0;
+	height: 200%;
+	left: -50%;
+	position: fixed;  // alphabetical or catagorically?
+	top: -50%;
+	width: 200%;
+}
+
+.guestSignInForm{
+	z-index: 1;
+	
+	top: 75%;
+	left: 50%;
+	margin-left: -40;
+	width: 120px;
+	position: absolute;
+}
+
+.openingBackground > img{
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	margin: auto;
+	min-height: 50%;
+	min-width: 50%;
+	position: absolute;
+}
+
+.passwordInput{
+	border: 0px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top: 2px;
+	border-top-color: #E3E3E3;
+	border-top-style: solid;
+	height: 44px;
+	width: 100%;
+}
+
+.signInButton{
+	background-color: #084F9E;
+	border: 1px;
+	border-radius: 3px;
+	margin-top: 12px;
+	height: 44px;
+	width: 100%;
+}
+
+
+.signInFormWrapper{
+	z-index: 1;
+	
+	top: 50%;
+	left: 50%;
+	margin-left: -130px;
+	margin-top: -70px;
+	width: 260px;
+	height: 140;
+	position: absolute;
+}
+
+.splashLogoHeader{
+	margin-left: 42px;
+}
+
+.usernameInput{
+	border: 0px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	width: 100%;
+	height: 44px;
+}
+

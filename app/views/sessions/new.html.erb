@@ -1,10 +1,7 @@
 <div class='content'>
-	<div class='openingBackground'>
-		<% unless current_user %>
-	  	<%= render "sessions/form" %>
-		<% end %>
-	</div>
-	<% unless logged_in? %>
-		<%= render "sessions/auto_sign_in" %>
-	<% end %>
+
+
+	<%= render "sessions/form" %>
+	<%= render "sessions/auto_sign_in" %>
+
 </div>

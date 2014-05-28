@@ -50,5 +50,4 @@ $(function(){
   function addPostToPage(serverResponse){
     $('.postsWrapper').prepend(serverResponse)
   };
-
 });
