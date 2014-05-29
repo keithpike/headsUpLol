@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      @blog = @user.blogs.create(title: "Change your blog title!", primary: true)
+      @blog = @user.blogs.create(title: "Change your blog title!", primary: true, avatar_url: "https://s3-us-west-1.amazonaws.com/headsuplolimages/thumbnail_#{(1..10).to_a.sample}.png")
       login!(@user)
       redirect_to dashboard_url #render dashboard with first blog showing
     else

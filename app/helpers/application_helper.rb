@@ -58,5 +58,11 @@ module ApplicationHelper
     "https://s3-us-west-1.amazonaws.com/headsuplolimages/splash#{("1".."10").to_a.sample}.jpg"
   end
 
+  def get_background_image(thumbnail_url)
+    num = thumbnail_url[-5]
+    num = "10" if num == "0"
+    test = "https://s3-us-west-1.amazonaws.com/headsuplolimages/background_#{num}_#{(1..2).to_a.sample}.jpg"
+    test
+  end
 
 end
