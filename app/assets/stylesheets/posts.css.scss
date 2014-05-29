@@ -42,6 +42,31 @@ div.markItUpContainer{
 
 
 
+//                                       Post Nav Bar                                     //
+
+a.newPostButton{
+  height: 90px;
+  width: 76px;
+
+}
+
+.newPostLabel{
+  bottom: 5px;
+}
+
+.newPostButtonWrapper{
+  display: inline-block;
+  height: 90px;
+  width: 76px;
+}
+
+#textNewPostButton{
+  margin-left: 50px;
+}
+
+
+
+
 
 //                                       PostBar                                          //
 
@@ -79,15 +104,29 @@ a.disabled {
   display: inline;
 }
 
-.dashboardMainView{
-  padding: 20px;
-  width: 900px;
-
-}
-
 .dashboardContent{
   background-color: #222222;
 }
+
+.dashboardMainView{
+  padding: 20px;
+  width: 900px;
+}
+
+.dashboardNavbarButtons{
+  height: 100px;
+  width: 615px;
+}
+
+.dashboardRightNavbar{
+  background-color: #323232;
+  border-radius: 6px;
+}
+.dashboardPostsNavbar{
+  margin-bottom: 20px;
+}
+
+
 
 div{
   color: #FFFFFF;
@@ -124,12 +163,14 @@ iframe.markItUpPreviewFrame{
   width: 452px;
 }
 
-.mainContentWrapper.container{
-  background-color: #222222;
-}
 
 .markItUpContainer{
   width: 454px;
+}
+
+div.modalWrapper{
+  background-color: #333333;
+  border-radius: 6px;
 }
 
 #newPostForm{
