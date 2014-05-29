@@ -56,5 +56,6 @@ $(function(){
     $background.css('background-image', 'url(' + window.selectedBackground + ')');
     $background.css('background-size', 'cover');
   }
+  debugger
   putThatBackground();
 });

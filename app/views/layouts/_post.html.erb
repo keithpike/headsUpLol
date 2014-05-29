@@ -1,13 +1,8 @@
 <div class='postContainer'>
-  <div class='postRow row'>
-
-    <div class='avatarCol col-xs-2'>
-      <a class='blogLink'>
-        <img src='<%= current_user.selected_blog.avatar_url.html_safe %>' class='avatarImage'></img>
-      </a>
-    </div>
-    <%= yield %>
-
+  <div class='avatarDisplay'>
+    <a class='blogLink'>
+      <img src='<%= current_user.selected_blog.avatar_url.html_safe %>' class='avatarImage'></img>
+    </a>
   </div>
+    <%= yield %>
 </div>
-

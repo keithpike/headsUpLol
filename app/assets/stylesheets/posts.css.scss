@@ -120,6 +120,21 @@ a.newPostButton{
 }
 
 
+//                                       Right Nav Bar                                    //
+
+
+.blogControls{
+  background-color: #323232;
+  border-radius: 6px;
+}
+
+.blogControlsPanel.panel{
+  background-color: #222222;
+
+  margin-bottom: 8px;
+}
+
+
 
 
 
@@ -145,20 +160,14 @@ a.disabled {
 //                                         Posts                                           //
 
 .avatarDisplay{
-<<<<<<< HEAD
-  display: inline;
-  left: -85px;
-=======
   display: inline-block;
   margin-left: -85px;
   position: absolute;
->>>>>>> right_path
   height: 65px;
   width: 65px;
 }
 
 .avatarImage{
-  display: inline;
 }
 
 .blogLink{
@@ -170,11 +179,12 @@ a.disabled {
 }
 
 .dashboardContent{
-  background-color: #222222;
+  background-color: rgba(0, 0, 0, 0.0);
   width: 900px;
 }
 
 .dashboardMainView{
+  background-color: rgba(0, 0, 0, 0.0);
   width: 900px;
 }
 
@@ -184,8 +194,8 @@ a.disabled {
 }
 
 .dashboardRightNavbar{
-  background-color: #323232;
-  border-radius: 6px;
+  background-color: #222222;
+
 }
 .dashboardPostsNavbar{
   margin-bottom: 20px;
@@ -201,7 +211,7 @@ div.headerNavigationWrapper{
 }
 
 div.mainContentWrapper{
-  background-color: #222222;
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
 div.modal-body{
@@ -252,6 +262,7 @@ iframe.markItUpPreviewFrame{
 .panel.col-xs-9{
   background-color: #222222;
   border: 0px;
+  border-top-right-radius: 0px;
 }
 
 .postContainer{
@@ -279,19 +290,8 @@ iframe.markItUpPreviewFrame{
   opacity: .6;
 }
 
-<<<<<<< HEAD
-.postFooter{
-  background-color: #3a3a3a;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  height: 45px;
-}
-
-=======
->>>>>>> right_path
 .postHeader{
   display: inline-block;
-  left: -85px;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-left: 20px;
