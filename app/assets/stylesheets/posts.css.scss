@@ -67,7 +67,7 @@ a.disabled {
 .avatarDisplay{
   display: inline-block;
   margin-left: -85px;
-  position: relative;
+  position: absolute;
   height: 65px;
   width: 65px;
 }
@@ -162,7 +162,9 @@ iframe.markItUpPreviewFrame{
 
 .postFooter{
   background-color: #3a3a3a;
-  border-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+
   height: 45px;
 }
 
