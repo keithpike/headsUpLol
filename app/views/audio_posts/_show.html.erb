@@ -19,9 +19,9 @@
   <div class='postContent'>
 
     <div class='mediaWrap'>
-      <% embeddable = get_embed_link(post.media_url).first.html %>
-      <% if embeddable %>
-       <%= embeddable.html_safe %>
+      <% embeddable = get_embed_link(post.media_url).first %>
+      <% if embeddable.html %>
+        <%= embeddable.html.html_safe %>
       <% else %>
         <img src='https://s3-us-west-1.amazonaws.com/headsuplolimages/404preview.png'>404 error Suppose you input the wrong url
         <img>
@@ -29,7 +29,9 @@
     </div>
 
     <div class='contentWrap'>
-      <p class='postDescription'><%= post.description %></p>
+      <% if embeddable.description %>
+        <p class='postDescription'><%= embeddable.description %></p>
+      <% end %>
     </div>
 
   </div>

@@ -1,16 +1,15 @@
 <div class='dashboardContent container'>
   <div class='dashboardMainView row'>
     <div class='panel col-xs-9'>
-      <div class='modalWrapper'>
-
-        <div class='dashboardPostsNavbar'>
-          <%= render partial: "dashboards/post_selector" %>
-        </div>
-
-        <%= render partial: 'dashboards/modal_post', layout: 'layouts/post_modal' %>
-      </div>
-
       <div class='postsWrapper'>
+        <div class='modalWrapper'>
+
+          <div class='dashboardPostsNavbar'>
+            <%= render partial: "dashboards/post_selector" %>
+          </div>
+
+          <%= render partial: 'dashboards/modal_post', layout: 'layouts/post_modal' %>
+        </div>
         <% unless current_user.selected_blog.nil? %>
           <% current_user.selected_blog.posts.sort_by{|post| post[:created_at]}.reverse.each do |post| %>
 
@@ -34,4 +33,5 @@
 
   <%= javascript_tag do %>
   	window.selectedBlogId = '<%=j current_user.selected_blog.id.to_s %>';
+    window.selectedBackground = '<%=j get_background_image(current_user.selected_blog.avatar_url) %>'
   <% end %>

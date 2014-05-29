@@ -2,28 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'bootstrap';
+
+
 
 //----------------------------------Input form Styling-------------------------------//
 
 #postCaptionInput{
+  color: black;
+
   height: 100px;
   width: 440px;
 }
 
 #postDescriptionInput{
+  color: black;
   height: 100px;
   width: 440px;
 }
 
 #postQuoteInput{
+  color: black;
   height: 100px;
   width: 440px;
 }
 
 //----------------------------------Output Display Styling-------------------------------//
 
+//                                    Everything Wrapper                                  //
+
+
+
+body, .everythingWrapper{
+  min-height: 100%;
+}
+
+html, body{
+  height: 100%;
+}
 
 //                                    Modal Post Input                                    //
+
+
+.modal-footer.btn-primary{
+  background-color: red;
+}
+
+div.modal-content{
+  width: 540px;
+}
 
 div.modal-footer{
   background-color: #222222;
@@ -33,11 +60,64 @@ div.modal-header{
   background-color: #222222;
 }
 
+
 div.markItUpContainer{
   background-color: #F7F7F7;
+  width: 498px;
 }
 
+div > textarea{
+  color: black;
+}
+
+.modal{
+  overflow: hidden;
+  margin-right: 0 !important;
+}
+
+#newPostForm > input{
+  color: black;
+}
+
+
 //                                       Page                                             //
+
+
+
+//                                     Header Nav Bar                                     //
+
+
+.headerNavigationWrapper{
+  margin: 0 auto;
+  padding-right: 30px;
+  width: 930px;
+}
+
+
+
+
+
+//                                       Post Nav Bar                                     //
+
+a.newPostButton{
+  height: 90px;
+  width: 76px;
+
+}
+
+.newPostLabel{
+  bottom: 5px;
+}
+
+.newPostButtonWrapper{
+  display: inline-block;
+  height: 90px;
+  width: 76px;
+}
+
+#textNewPostButton{
+  margin-left: 50px;
+}
 
 
 
@@ -65,8 +145,14 @@ a.disabled {
 //                                         Posts                                           //
 
 .avatarDisplay{
+<<<<<<< HEAD
   display: inline;
   left: -85px;
+=======
+  display: inline-block;
+  margin-left: -85px;
+  position: absolute;
+>>>>>>> right_path
   height: 65px;
   width: 65px;
 }
@@ -79,31 +165,52 @@ a.disabled {
   display: inline;
 }
 
-.dashboardMainView{
-  padding: 20px;
-  width: 900px;
-
+.btn{
+  color: red;
 }
 
 .dashboardContent{
   background-color: #222222;
+  width: 900px;
+}
+
+.dashboardMainView{
+  width: 900px;
+}
+
+.dashboardNavbarButtons{
+  height: 100px;
+  width: 615px;
+}
+
+.dashboardRightNavbar{
+  background-color: #323232;
+  border-radius: 6px;
+}
+.dashboardPostsNavbar{
+  margin-bottom: 20px;
 }
 
 div{
-  color: #FFFFFF;
+  color: #9c9c9c;
   font:14px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
-}
-
-div.mainContentWrapper{
-  background-color: #222222;
 }
 
 div.headerNavigationWrapper{
   background-color: #222222;
 }
 
+div.mainContentWrapper{
+  background-color: #222222;
+}
+
 div.modal-body{
   background-color: #323232;
+}
+
+div.modalWrapper{
+  background-color: #333333;
+  border-radius: 6px;
 }
 
 .everythingWrapper{
@@ -119,22 +226,27 @@ html{
   background-color: #222222;
 }
 
+iframe.embedly-embed{
+  margin: 0 auto;
+}
+
 iframe.markItUpPreviewFrame{
   height: 112px;
   width: 452px;
-}
-
-.mainContentWrapper.container{
-  background-color: #222222;
 }
 
 .markItUpContainer{
   width: 454px;
 }
 
+.mainContentWrapper{
+  width: 900px;
+}
+
 #newPostForm{
   margin-left: auto;
   margin-right: auto;
+  width: 498px;
 }
 
 .panel.col-xs-9{
@@ -152,6 +264,13 @@ iframe.markItUpPreviewFrame{
   padding-left: 20px;
 }
 
+.postFooter{
+  background-color: #3a3a3a;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  height: 45px;
+}
+
 .postInfo p{
   color: gainsboro;
   display: inline-block;
@@ -160,6 +279,7 @@ iframe.markItUpPreviewFrame{
   opacity: .6;
 }
 
+<<<<<<< HEAD
 .postFooter{
   background-color: #3a3a3a;
   border-bottom-left-radius: 6px;
@@ -167,6 +287,8 @@ iframe.markItUpPreviewFrame{
   height: 45px;
 }
 
+=======
+>>>>>>> right_path
 .postHeader{
   display: inline-block;
   left: -85px;
@@ -179,11 +301,31 @@ iframe.markItUpPreviewFrame{
   display: inline-block;
 }
 
+#postMediaInput{
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 38px;
+  width: 498px;
+}
+
 .postSubheader{
   display: inline-block;
   margin: 0px;
 }
 
+#postTitleInput{
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 498px;
+  height: 38px;
+}
+
+#postUrlInput{
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 498px;
+  height: 38px;
+}
 
 span.postTitle{
  color: #FFDB4C;
@@ -197,6 +339,20 @@ span.postTitle{
 //                                       Chat Posts                                        //
 
 
+#markItUpPostCaptionInput{
+  margin: 0;
+}
+
+#postCaptionInput{
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 498px;
+}
+
+.postCaption > p > strong{
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
 
 
 
@@ -220,15 +376,20 @@ span.postTitle{
 
 }
 
-#postDescriptionInput.markItUp{
+#postDescriptionInput.markItUpEditor{
   margin: 7px auto;
+  padding-left: 10px;
+  padding-right: 10px;
   resize: vertical;
-  width: 450px;
+  width: 498px;
 }
 
 #postQuoteInput{
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
   resize: vertical;
+  width: 498px;
 }
 
 span.quote{

@@ -1,45 +1,60 @@
-    <div class='avatarDisplay'>
-      <a>
-      </a>
-    </div>
+  <div class='avatarDisplay'>
+    <a class='blogLink'>
+      <img src='<%= current_user.selected_blog.avatar_url.html_safe %>' class='avatarImage'></img>
+    </a>
+  </div>
 
     <div class='dashboardNavBarButtonWrapper row' >
-      <nav class='dashboardNavbarButtons xs-col-4'>
+      <nav class='dashboardNavbarButtons'>
 
-        <a class='newPostButton' id='newPostText' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Text</span>
-        </a>
+        <div class='newPostButtonWrapper' id='textNewPostButton'>
+          <a class='newPostButton' id='newPostText' href='#'>
+            <span class="glyphicon glyphicon-font"></span>
+            <span class='newPostLabel'>Text</span>
+          </a>
+        </div>
 
-        <a class='newPostButton' id='newPostPhoto' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Photo</span>
-        </a>
+        <div class='newPostButtonWrapper'>
+          <a class='newPostButton' id='newPostPhoto' href='#'>
+            <span class="glyphicon glyphicon-camera"></span>
+            <span class='newPostLabel'>Photo</span>
+          </a>
+        </div>
 
-        <a class='newPostButton' id='newPostQuote' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Quote</span>
-        </a>
+        <div class='newPostButtonWrapper'>
+          <a class='newPostButton' id='newPostQuote' href='#'>
+            <span class="glyphicon glyphicon-comment"></span>
+            <span class='newPostLabel'>Quote</span>
+          </a>
+        </div>
 
-        <a class='newPostButton' id='newPostLink' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Link</span>
-        </a>
+        <div class='newPostButtonWrapper'>
+          <a class='newPostButton' id='newPostLink' href='#'>
+            <span class='glyphicon glyphicon-link'></span>
+            <span class='newPostLabel'>Link</span>
+          </a>
+        </div>
 
-        <a class='newPostButton' id='newPostChat' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Chat</span>
-        </a>
+        <div class='newPostButtonWrapper'>
+          <a class='newPostButton' id='newPostChat' href='#'>
+            <span class="glyphicon glyphicon-comment"></span>
+            <span class='newPostLabel'>Chat</span>
+          </a>
+        </div>
 
-        <a class='newPostButton disabled' id='newPostAudio' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Audio</span>
-        </a>
+        <div class='newPostButtonWrapper'>
+          <a class='newPostButton' id='newPostAudio' href='#'>
+            <span class="glyphicon glyphicon-headphones"></span>
+            <span class='newPostLabel'>Audio</span>
+          </a>
+        </div>
 
-        <a class='newPostButton' id='newPostVideo' href='#'>
-          <icon></icon>
-          <span class='newPostLabel'>Video</span>
-        </a>
+        <div class='newPostButtonWrapper'>
+          <a class='newPostButton' id='newPostVideo' href='#'>
+            <span class="glyphicon glyphicon-facetime-video"></span>
+            <span class='newPostLabel'>Video</span>
+          </a>
+        </div>
 
       </nav>
     </div>

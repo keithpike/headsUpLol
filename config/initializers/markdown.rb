@@ -10,3 +10,4 @@ def configure_markitup
 end
 
 $markdown = initialize_markdown
+configure_markitup
