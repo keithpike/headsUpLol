@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    layout 'splash'
     @user = User.new(user_params)
     if @user.save
       @blog = @user.blogs.create(title: "Change your blog title!", primary: true)

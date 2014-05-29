@@ -1,5 +1,5 @@
 <div class='dashboardContent container'>
-  <div class='row'>
+  <div class='dashboardMainView row'>
     <div class='panel col-xs-9'>
       <div class='modalWrapper'>
 
@@ -14,15 +14,19 @@
         <% unless current_user.selected_blog.nil? %>
           <% current_user.selected_blog.posts.sort_by{|post| post[:created_at]}.reverse.each do |post| %>
 
-            <%= render partial: 'dashboards/post', layout: 'layouts/post', locals: { post: post, markdown: @markdown } %>
+              <%= render partial: 'dashboards/post',
+                layout: 'layouts/post',
+                locals: { post: post, markdown: @markdown } %>
 
           <% end %>
         <% end %>
       </div>
+      </div>
+      <div class='dashboardRightNavbar col-xs-3'>
+        <%= render partial: 'dashboards/right_navbar', layout: 'layouts/blank', locals: { blogs: current_user.blogs} %>
+      </div>
     </div>
-    <div class='dashboardRightNavbar col-xs-3'>
-      <%= render partial: 'dashboards/right_navbar', layout: 'layouts/blank', locals: { blogs: current_user.blogs} %>
-    </div>
+
 
 
   </div>

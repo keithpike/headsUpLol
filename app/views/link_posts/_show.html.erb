@@ -1,17 +1,16 @@
   <div class='postHeader'>
     <div class='postHeaderLeft'>
+      <p class='postSubheader'><%= current_user.username %></p>
       <a href='#'>
         <span class='postTitle'>Link</span>
       </a>
+      <div class='postInfo'>
+        <p class='postSubheader'><%= post.created_at.strftime("%B %d, %Y") %></p>
+      </div>
     </div>
 
     <div class='postHeaderRight'>
-
-    </div>
-
-    <div class='postInfo'>
-      <p><%= current_user.username %></p>
-      <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+      <img></img>
     </div>
   </div>
 
@@ -22,7 +21,13 @@
     </div>
 
     <div class='contentWrap'>
-      <p class='postDescription'><%= post.description %></p>
+      <div class='linkPreview'>
+        <a href='<%= post.url %>' class='linkPostLink'><%= post.title %></a>
+      </div>
+      <p class='postCaption'><%= post.caption %></p>
     </div>
 
+  </div>
+
+  <div class='postFooter'>
   </div>

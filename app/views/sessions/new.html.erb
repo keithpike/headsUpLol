@@ -1,7 +1,13 @@
-<div class='content'>
+<div class='content container-fluid'>
+  <div class='signInFormWrapper absoluteCenter'>
+  	<%= render "sessions/form" %>
+  	<%= render "sessions/auto_sign_in" %>
+  </div>
 
 
-	<%= render "sessions/form" %>
-	<%= render "sessions/auto_sign_in" %>
-
+  <a class=signupLinkWrapper href='<%= new_user_url %>'>
+  </a>
+  <span class='signupText'>
+    Sign Up
+  </span>
 </div>

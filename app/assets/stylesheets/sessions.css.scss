@@ -5,22 +5,43 @@
 //                         splash page                       //
 
 a.splashLogo{
-	font:35px/24px "make_juice";
-	margin-left: auto;
-	margin-right: auto;
+  color: #FFCD03;
+	font:50px/24px "make_juice";
 	text-decoration: none;
-	width: 100%;
+  text-shadow:
+         3px 3px 0 #000,
+       -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+         2px 2px 0 #000;
+
 }
 
 a.splashLogo:hover{
 	text-decoration: none;
+  color: #FFCD03;
 }
+
 
 .autoSignInButton{
 	background-color: #084F9E;
 	border: 1px;
-	margin-top: 12px;
-	width: 100%;
+  border-radius: 3px;
+  margin: 0 auto;
+  word-wrap: normal;
+  opacity: .6;
+	height: 70px;
+  width: 90px;
+  z-index: 0;
+}
+
+.autoSignInButton:hover{
+  opacity: 1.0;
+}
+
+.content{
+  height: 100%;
+  width: 100%;
 }
 
 div.openingBackground{
@@ -32,14 +53,34 @@ div.openingBackground{
 	width: 200%;
 }
 
+.emailInput{
+	border: 0px;
+	border-top: 2px;
+	border-top-color: #E3E3E3;
+	border-top-style: solid;
+  color: black;
+  padding: 10px;
+	height: 44px;
+	width: 100%;
+}
+
 .guestSignInForm{
 	z-index: 1;
-	
-	top: 75%;
+  display: block;
 	left: 50%;
-	margin-left: -40;
-	width: 120px;
+	margin-left: -45px;
+  margin-top: 20px;
+	width: 100px;
 	position: absolute;
+}
+
+.logInText{
+  color: white;
+  opacity: 1.0;
+  left: 71px;
+  bottom: 52px;
+  position: absolute;
+  z-index: 1;
 }
 
 .openingBackground > img{
@@ -47,7 +88,6 @@ div.openingBackground{
 	left: 0;
 	bottom: 0;
 	right: 0;
-
 	margin: auto;
 	min-height: 50%;
 	min-width: 50%;
@@ -61,6 +101,8 @@ div.openingBackground{
 	border-top: 2px;
 	border-top-color: #E3E3E3;
 	border-top-style: solid;
+  color: black;
+  padding: 10px;
 	height: 44px;
 	width: 100%;
 }
@@ -70,21 +112,60 @@ div.openingBackground{
 	border: 1px;
 	border-radius: 3px;
 	margin-top: 12px;
+  opacity: 1;
 	height: 44px;
 	width: 100%;
 }
 
+.signInFormInputsWrapper{
+  margin-top: 30px;
+  opacity: .8;
+}
 
 .signInFormWrapper{
-	z-index: 1;
-	
+	z-index: 3;
+
 	top: 50%;
 	left: 50%;
 	margin-left: -130px;
-	margin-top: -70px;
+	margin-top: -180px;
 	width: 260px;
 	height: 140;
 	position: absolute;
+}
+
+.signupLinkWrapper{
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  bottom: 0px;
+  font:16px/45px 'Helvetica Neue' Arial Helvetica sans-serif;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  opacity: .3;
+  position: absolute;
+  text-align: center;
+  text-color: white;
+  text-decoration: none!important;
+  z-index: 2;
+  height: 45px;
+  width: 102px;
+}
+
+h1.splashLogoHeader{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin: auto;
+}
+
+.signupText{
+  color: white;
+  opacity: 1.0;
+  left: 80px;
+  bottom: 52px;
+  position: absolute;
+  z-index: 1;
 }
 
 .splashLogoHeader{
@@ -95,6 +176,8 @@ div.openingBackground{
 	border: 0px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
+  color: black;
+  padding: 10px;
 	width: 100%;
 	height: 44px;
 }

@@ -1,29 +1,29 @@
-<% if(post.post_type == 'Text') %>
+  <% if(post.post_type == 'Text') %>
 
-  <%= render partial: 'text_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'text_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% elsif(post.post_type == 'Photo') %>
+  <% elsif(post.post_type == 'Photo') %>
 
-  <%= render partial: 'photo_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'photo_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% elsif(post.post_type == 'Quote') %>
+  <% elsif(post.post_type == 'Quote') %>
 
-  <%= render partial: 'quote_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'quote_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% elsif(post.post_type == 'Link') %>
+  <% elsif(post.post_type == 'Link') %>
 
-  <%= render partial: 'link_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'link_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% elsif(post.post_type == 'Chat') %>
+  <% elsif(post.post_type == 'Chat') %>
 
-  <%= render partial: 'chat_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'chat_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% elsif(post.post_type == 'Audio') %>
+  <% elsif(post.post_type == 'Audio') %>
 
-  <%= render partial: 'audio_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'audio_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% elsif post.post_type == 'Video' %>
+  <% elsif post.post_type == 'Video' %>
 
-  <%= render partial: 'video_posts/show', layout: 'layouts/blank', locals: { post: post } %>
+    <%= render partial: 'video_posts/show', layout: 'layouts/blank', locals: { post: post } %>
 
-<% end %>
+  <% end %>

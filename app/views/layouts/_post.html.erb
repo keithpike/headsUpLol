@@ -1,5 +1,8 @@
 <div class='postContainer'>
-
-  <%= yield %>
-  
+  <div class='avatarDisplay'>
+    <a class='blogLink'>
+      <img src='<%= current_user.selected_blog.avatar_url.html_safe %>' class='avatarImage'></img>
+    </a>
+  </div>
+    <%= yield %>
 </div>

@@ -9,16 +9,18 @@
 </head>
 <body>
 
-  <%= render 'dashboards/main_navbar' %>
+  <div class='everythingWrapper'>
+    <%= render 'dashboards/main_navbar' %>
 
-	<% if flash[:errors] %>
-		<% flash[:errors].each do |error| %>
-			<%= error %>
-			</br>
-	  <% end %>
-  <% end %>
-  <div class='mainContentWrapper'>
-    <%= yield %>
+  	<% if flash[:errors] %>
+  		<% flash[:errors].each do |error| %>
+  			<%= error %>
+  			</br>
+  	  <% end %>
+    <% end %>
+    <div class='mainContentWrapper container'>
+      <%= yield %>
+    </div>
   </div>
 
 </body>

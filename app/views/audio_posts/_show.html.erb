@@ -1,3 +1,4 @@
+
   <div class='postHeader'>
     <div class='postHeaderLeft'>
       <a href='#'>
@@ -10,8 +11,8 @@
     </div>
 
     <div class='postInfo'>
-      <p><%= current_user.username %></p>
-      <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+      <p class='postSubheader'><%= current_user.username %></p>
+      <p class='postSubheader'><%= post.created_at.strftime("%B %d, %Y") %></p>
     </div>
   </div>
 
@@ -31,4 +32,7 @@
       <p class='postDescription'><%= post.description %></p>
     </div>
 
+  </div>
+
+  <div class='postFooter'>
   </div>

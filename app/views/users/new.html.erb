@@ -1,4 +1,11 @@
-<div class='content'>
-	<%= render "users/form" %>
-	<%= render "sessions/auto_sign_in" %>
+<div class='content container-fluid'>
+  <div class='signInFormWrapper absoluteCenter'>
+  	<%= render "users/form" %>
+  </div>
+
+  <a class=signupLinkWrapper href='<%= root_url %>'>
+  </a>
+  <span class='logInText'>
+    Log In
+  </span>
 </div>

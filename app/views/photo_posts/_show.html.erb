@@ -1,34 +1,40 @@
-<div class='postHeader'>
-  <div class='postHeaderLeft'>
-      <span class='postTitle'>Photo</span>
-    <!-- <a href=''>
-      <span class='postTitle'><%= post.title %></span>
-    </a> -->
+  <div class='postHeader'>
+    <div class='postHeaderLeft'>
+      <p class='postSubheader'><%= current_user.username %></p>
+
+      <a href='#'>
+        <span class='postTitle'>Photo</span>
+      </a>
+      <div class='postInfo'>
+        <p class='postSubheader'><%= post.created_at.strftime("%B %d, %Y") %></p>
+      </div>
+    </div>
+
+    <div class='postHeaderRight'>
+      <img></img>
+    </div>
   </div>
 
-  <div class='postHeaderRight'>
+  <div class='postContent'>
+
+    <div class='mediaWrap'>
+
+    </div>
+
+    <div class='contentWrap'>
+      <a href='#' class='postPictureLink'>
+        <img class='postPicture' href='#'>
+      </a>
+      <p class='postDescription'>
+        <%= post.description %>
+      </p>
+    </div>
 
   </div>
 
-  <div class='postInfo'>
-    <p><%= current_user.username %></p>
-    <p><%= post.created_at.strftime("%B %d, %Y") %></p>
-  </div>
-</div>
-
-<div class='postContent'>
-
-  <div class='mediaWrap'>
-
+  <div class='postFooter'>
   </div>
 
-  <div class='contentWrap'>
-    <a href='#' class='postPictureLink'>
-      <img class='postPicture' href='#'>
-    </a>
-    <p class='postDescription'>
-      <%= post.description %>
-    </p>
-  </div>
 
-</div>
+
+

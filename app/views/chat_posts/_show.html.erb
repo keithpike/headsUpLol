@@ -1,29 +1,33 @@
   <div class='postHeader'>
     <div class='postHeaderLeft'>
+      <p class='postSubheader'><%= current_user.username %></p>
+
       <a href='#'>
         <span class='postTitle'>Chat</span>
-        <!-- <span class='postTitle'><%= post.title %></span> -->
       </a>
+      <div class='postInfo'>
+        <p class='postSubheader'><%= post.created_at.strftime("%B %d, %Y") %></p>
+      </div>
     </div>
 
     <div class='postHeaderRight'>
-
-    </div>
-
-    <div class='postInfo'>
-      <p><%= current_user.username %></p>
-      <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+      <img></img>
     </div>
   </div>
 
   <div class='postContent'>
 
     <div class='mediaWrap'>
-
     </div>
 
     <div class='contentWrap'>
-      <p class='postCaption'><%= @markdown.render(post.caption).html_safe %></p>
+
+      <div class='postCaption'>
+        <%= @markdown.render(post.caption).html_safe %>
+      </div>
     </div>
 
+  </div>
+
+  <div class='postFooter'>
   </div>

@@ -64,7 +64,28 @@ a.disabled {
 
 //                                         Posts                                           //
 
-.container.dashboardContent{
+.avatarDisplay{
+  display: inline-block;
+  margin-left: -85px;
+  position: relative;
+  height: 65px;
+  width: 65px;
+}
+
+.avatarImage{
+}
+
+.blogLink{
+  display: inline;
+}
+
+.dashboardMainView{
+  padding: 20px;
+  width: 900px;
+
+}
+
+.dashboardContent{
   background-color: #222222;
 }
 
@@ -85,14 +106,26 @@ div.modal-body{
   background-color: #323232;
 }
 
+.everythingWrapper{
+  background-color: #222222;
+}
+
+.fullPostWrapper{
+  padding-bottom: 15px;
+  padding: 15px;
+}
+
 html{
   background-color: #222222;
-  foreground-color: #222222;
 }
 
 iframe.markItUpPreviewFrame{
   height: 112px;
   width: 452px;
+}
+
+.mainContentWrapper.container{
+  background-color: #222222;
 }
 
 .markItUpContainer{
@@ -107,24 +140,61 @@ iframe.markItUpPreviewFrame{
 .panel.col-xs-9{
   background-color: #222222;
   border: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-
 }
 
 .postContainer{
   background-color: #333333;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.postContent{
+  padding-left: 20px;
 }
 
 .postInfo p{
   color: gainsboro;
+  display: inline-block;
   font:13px/20px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
+  padding-left: 10px;
+  opacity: .6;
 }
+
+.postFooter{
+  background-color: #3a3a3a;
+  border-radius: 6px;
+  height: 45px;
+}
+
+.postHeader{
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.postHeaderRight{
+  display: inline-block;
+}
+
+.postSubheader{
+  display: inline-block;
+  margin: 0px;
+}
+
 
 span.postTitle{
  color: #FFDB4C;
+ display: block;
  font:22px/30px "Helvetica Neue", HelveticaNeue, arial, sans-serif;
+ padding-top: 10px;
+
 }
+
+
+//                                       Chat Posts                                        //
+
+
 
 
 
@@ -133,6 +203,15 @@ span.postTitle{
 
 //                                        QuotePost                                        //
 
+
+.attributionWrapper{
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.quoteWrapper{
+  padding-bottom: 10px;
+}
 
 #markItUpPostDescriptionInput{
   margin: 0 auto;
