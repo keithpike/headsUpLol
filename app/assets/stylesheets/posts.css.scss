@@ -8,8 +8,8 @@
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('/assets/fonts/glyphicons-halflings-regular.eot');
-  src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 //----------------------------------Input form Styling-------------------------------//
 
@@ -96,6 +96,56 @@ div > textarea{
   margin: 0 auto;
   padding-right: 30px;
   width: 930px;
+}
+
+.logoutButton{
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: none;
+  -webkit-writing-mode: horizontal-tb;
+  align-items: initial;
+  background-color: rgba(192, 192, 192, 0);
+  border-bottom-color: rgba(156, 156, 156, 0);
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-image-outset: 0px;
+  border-image-repeat: none;
+  border-image-slice: none;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgba(192, 192, 192, 0);
+  border-left-style: none;
+  border-left-width: 2px;
+  border-right-color: rgba(192, 192, 192, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-top-color: rgba(156, 156, 156, 0);
+  border-top-style: none;
+  border-top-width: 0px;
+  box-sizing: border-box;
+  color: rgb(156, 156, 156);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 19px;
+  letter-spacing: normal;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  top: 1px;
+  white-space: initial;
+  width: 16px;
+  word-spacing: 0px;
 }
 
 
@@ -417,5 +467,8 @@ span.attribution:before{
 .markItUpEditor{
   max-width: 100%;
 }
+
+
+
 
 
