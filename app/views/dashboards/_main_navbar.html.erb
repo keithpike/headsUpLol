@@ -4,13 +4,24 @@
     <div class='headerNavigationWrapper'>
       <div class='headerMainNavbar'>
         <% if current_user %>
-          <a href='/dashboard'>
-            <span class='glyphicon glyphicon-home'></span>
-          </a>
-          <a href='#'>
-            <span class='glyphicon glyphicon-cog'></span>
-          </a>
-          <%= button_to "", session_url, {method: :delete, class: 'logoutButton glyphicon glyphicon-off'} %>
+
+          <div class='homeButtonWrapper'>
+            <a href='/dashboard'>
+              <span class='homeIcon glyphicon glyphicon-home'></span>
+            </a>
+          </div>
+
+          <div class='optionsButtonWrapper'>
+            <a href='#'>
+              <span class='optionsIcon glyphicon glyphicon-cog'></span>
+            </a>
+          </div>
+
+          <div class='logoutButtonWrapper'>
+            <%= button_to "", session_url, {method: :delete, class: 'logoutButton glyphicon glyphicon-off'} %>
+            <span class='logoutIcon glyphicon glyphicon-off'><span>
+          </div>
+
         <% else %>
         <% end %>
       </div>

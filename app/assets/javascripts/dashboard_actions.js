@@ -5,7 +5,7 @@ $(function(){
 	function handleNewPost(event){
 		event.preventDefault();
 		var formFields = makeFormRequest('../' +
-			$(event.target).text().toLowerCase() + '_post/new');
+			$(event.target).attr('path').toLowerCase() + '_post/new');
 		handleModalOpen('#newPostModal');
 	};
 

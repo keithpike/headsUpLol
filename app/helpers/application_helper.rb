@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def check_log_in
-    redirect_to splash_url unless logged_in?
+    redirect_to root_url unless logged_in?
   end
 
   def get_embed_link(passed_url)

@@ -1,59 +1,56 @@
-  <div class='avatarDisplay'>
-    <a class='blogLink'>
-      <img src='<%= current_user.selected_blog.avatar_url.html_safe %>' class='avatarImage'></img>
-    </a>
-  </div>
 
-    <div class='dashboardNavBarButtonWrapper row' >
-      <nav class='dashboardNavbarButtons'>
 
-        <div class='newPostButtonWrapper' id='textNewPostButton'>
-          <a class='newPostButton' id='newPostText' href='#'>
-            <span class="glyphicon glyphicon-font"></span>
-            <span class='newPostLabel'>Text</span>
-          </a>
-        </div>
+    <div class='dashboardNavBarButtonWrapper' >
+      <nav class='row'>
+        <div class='dashboardNavbarButtons'>
+          <div class='newPostButtonWrapper col-xs-1'>
+            <a class='newPostButton' id='newPostText' href='#'>
+              <i class="glyphicon glyphicon-font" path='Text'></i>
+              <span class='newPostLabel' id='textPostLabel' path='Text'>Text</span>
+            </a>
+          </div>
 
-        <div class='newPostButtonWrapper'>
-          <a class='newPostButton' id='newPostPhoto' href='#'>
-            <span class="glyphicon glyphicon-camera"></span>
-            <span class='newPostLabel'>Photo</span>
-          </a>
-        </div>
+          <div class='newPostButtonWrapper col-xs-1'>
+            <a class='newPostButton' id='newPostPhoto' href='#'>
+              <i class="glyphicon glyphicon-camera" path='Photo'></i>
+              <span class='newPostLabel' id='photoPostLabel' path='Photo'>Photo</span>
+            </a>
+          </div>
 
-        <div class='newPostButtonWrapper'>
-          <a class='newPostButton' id='newPostQuote' href='#'>
-            <span class="glyphicon glyphicon-comment"></span>
-            <span class='newPostLabel'>Quote</span>
-          </a>
-        </div>
+          <div class='newPostButtonWrapper col-xs-1'>
+            <a class='newPostButton' id='newPostQuote' href='#'>
+              <i class="glyphicon glyphicon-quote" path='Quote'>&#8220</i>
+              <span class='newPostLabel' id='quotePostLabel' path='Quote'>Quote</span>
+            </a>
+          </div>
 
-        <div class='newPostButtonWrapper'>
-          <a class='newPostButton' id='newPostLink' href='#'>
-            <span class='glyphicon glyphicon-link'></span>
-            <span class='newPostLabel'>Link</span>
-          </a>
-        </div>
+          <div class='newPostButtonWrapper col-xs-1'>
+            <a class='newPostButton' id='newPostLink' href='#'>
+              <i class='glyphicon glyphicon-link newPostLabel' path='Link'></i>
+              <span class='newPostLabel' id='linkPostLabel' path='Link'>Link</span>
+            </a>
+          </div>
 
-        <div class='newPostButtonWrapper'>
-          <a class='newPostButton' id='newPostChat' href='#'>
-            <span class="glyphicon glyphicon-comment"></span>
-            <span class='newPostLabel'>Chat</span>
-          </a>
-        </div>
+          <div class='newPostButtonWrapper col-xs-1'>
+              <a class='newPostButton' id='newPostChat' href='#'>
+                <i class="glyphicon glyphicon-comment" path='Chat'></i>
+                <span class='newPostLabel' id='chatPostLabel' path='Chat'>Chat</span>
+              </a>
+          </div>
 
-        <div class='newPostButtonWrapper'>
-          <a class='newPostButton' id='newPostAudio' href='#'>
-            <span class="glyphicon glyphicon-headphones"></span>
-            <span class='newPostLabel'>Audio</span>
-          </a>
-        </div>
+          <div class='newPostButtonWrapper col-xs-1'>
+            <a class='newPostButton' id='newPostAudio' href='#'>
+              <i class="glyphicon glyphicon-headphones" path='Audio'></i>
+              <span class='newPostLabel' id='audioPostLabel' path='Audio'>Audio</span>
+            </a>
+          </div>
 
-        <div class='newPostButtonWrapper'>
-          <a class='newPostButton' id='newPostVideo' href='#'>
-            <span class="glyphicon glyphicon-facetime-video"></span>
-            <span class='newPostLabel'>Video</span>
-          </a>
+          <div class='newPostButtonWrapper col-xs-1'>
+            <a class='newPostButton' id='newPostVideo' href='#'>
+              <i class="glyphicon glyphicon-facetime-video" path='Video'></i>
+              <span class='newPostLabel' id='videoPostLabel' path='Video'>Video</span>
+            </a>
+          </div>
         </div>
 
       </nav>

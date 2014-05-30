@@ -1,15 +1,27 @@
 <div class='blogControlsPanel panel'>
   <ul class='blogControls'>
-    <ul class='blogDropDownSelector'>
-      <% blogs.each do |blog| %>
-        <li class='blogSelectionListItem'>
-          <span class='blogSelectionText'><%= blog.title %></span>
-        </li>
-      <% end %>
-    </ul>
+    <div class='blogSelectorWrapper dropdown'>
+      <button class='btn dropdown-toggle sr-only' type='button' data-toggle='dropdown'>
+        <%= current_user.selected_blog.title %>
+        <span class='caret'></span>
+      </button>
+      <button class='blogSelectorButton btn dropdown-toggle' type='button' data-toggle='dropdown'>
+        <%= current_user.selected_blog.title %>
+        <span class='caret'></span>
+      </button>
+      <ul class='blogDropDownSelector dropdown-menu' role='menu' href='#'>
+        <% blogs.each do |blog| %>
+          <li class='blogSelectionListItem' role='presentation'>
+            <a class='blogSelectionText' role='menuitem' tabindex='-1' href='#'>
+              <%= blog.title %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
     <li class='blogPostsControl'>
       <a href='#' class='blogPostsLink'>
-        <span></span>
+        Posts
       </a>
     </li>
     <li class='followersListItem'>

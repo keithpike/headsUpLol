@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+  before_action :check_log_in
 
 	def index
 		@posts = current_user.posts
