@@ -5,19 +5,19 @@
       <div class='headerMainNavbar'>
         <% if current_user %>
 
-          <div class='homeButtonWrapper'>
+          <div class='mainNavbarButtonWrapper'>
             <a href='/dashboard'>
               <span class='homeIcon glyphicon glyphicon-home'></span>
             </a>
           </div>
 
-          <div class='optionsButtonWrapper'>
+          <div class='mainNavbarButtonWrapper'>
             <a href='#'>
               <span class='optionsIcon glyphicon glyphicon-cog'></span>
             </a>
           </div>
 
-          <div class='logoutButtonWrapper'>
+          <div class='mainNavbarButtonWrapper'>
             <%= button_to "", session_url, {method: :delete, class: 'logoutButton glyphicon glyphicon-off'} %>
             <span class='logoutIcon glyphicon glyphicon-off'><span>
           </div>

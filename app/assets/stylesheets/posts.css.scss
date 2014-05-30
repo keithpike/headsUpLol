@@ -95,10 +95,20 @@ div > textarea{
   color: black;
 }
 
+#postInputButton{
+
+}
+
 
 //                                       Page                                             //
 
+*:focus{
+  outline: none;
+}
 
+*:active{
+ outline: none;
+}
 
 //                                     Header Nav Bar                                     //
 
@@ -149,32 +159,37 @@ div > textarea{
   background-color: transparent;
   margin: 0 auto;
   padding-right: 30px;
+  height: 43px;
   width: 930px;
 }
 
-.homeButtonWrapper{
+.headerMainNavbar{
+  display: inline-block;
+  position: relative;
+  left: 550px;
+  width: 114px;
+
+}
+
+.mainNavbarButtonWrapper{
+  color: gray;
   display: inline-block;
   font-size: 22px;
   line-height: 30px;
+  opacity: .6;
   padding-left: 6px;
   padding-top: 6px;
   height: 38px;
   width: 35px;
+}
+
+.mainNavbarButtonWrapper > a{
+  color: gray;
 }
 
 .homeIcon{
   padding-top: 6px;
   margin: 0 auto;
-}
-
-.optionsButtonWrapper{
-  display: inline-block;
-  font-size: 22px;
-  line-height: 30px;
-  padding-left: 6px;
-  padding-top: 6px;
-  height: 38px;
-  width: 35px;
 }
 
 .logoutButton{
@@ -242,9 +257,15 @@ div > textarea{
   width: 35px;
 }
 
+.mainNavbarButtonWrapper:hover{
+  opacity: 1.0;
+}
+
 .logoutIcon{
   z-index: 0;
 }
+
+
 
 
 
@@ -546,12 +567,9 @@ iframe.embedly-embed{
 
 iframe.markItUpPreviewFrame{
   height: 112px;
-  width: 452px;
+  width: 498px;
 }
 
-.markItUpContainer{
-  width: 454px;
-}
 
 .mainContentWrapper{
   width: 900px;
