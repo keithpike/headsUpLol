@@ -7,7 +7,7 @@ While the project was originally intended to utilize backbone with a nested poly
 
 Project built using:
 
-Ruby: 1.9.3\n
+Ruby: 1.9.3
 Rails: 4.1.1
 Embedly: 1.9.1
 LinkThumbnailer: 2.0.2 (yet to be implemented)
