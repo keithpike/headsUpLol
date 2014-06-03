@@ -1,3 +1,5 @@
+###HeadsUpLol
+
 HeadsUpLol is a tumblr clone with a League of Legends theme.
 
 While the project was originally intended to utilize backbone with a nested polymorphic association (to learn backbone associations), the decision was made to do go with ROR and AJAX requests to expediate development to meet deadline.
