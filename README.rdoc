@@ -9,5 +9,5 @@ Ruby: 1.9.3
 Rails: 4.1.1
 Embedly: 1.9.1
 LinkThumbnailer: 2.0.2 (yet to be implemented)
-Markitup-rails: 1.1.3
+Markitup-rails: 1.1.3\n
 Redcarpet: 3.1.2
